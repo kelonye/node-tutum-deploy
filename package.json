@@ -1,0 +1,31 @@
+{
+  "name": "tutum-deploy",
+  "version": "0.0.1",
+  "description": "Easy cluster deployments using Tutum API",
+  "dependencies": {
+    "batch": "^0.5.1",
+    "commander": "^2.1.0",
+    "component-clone": "^0.2.2",
+    "debug": "^1.0.3",
+    "js-yaml": "^3.2.3",
+    "superagent": "^0.18.2",
+    "win-fork": "~1.1.1"
+  },
+  "keywords": [
+    "tutum",
+    "docker",
+    "deploy"
+  ],
+  "author": "Mitchel Kelonye<kelonyemitchel@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kelonye/tutum-deploy.git"
+  },
+  "bin": {
+    "td": "./bin/td"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "licenses": "MIT"
+}

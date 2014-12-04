@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+/**
+  * Module dependencies.
+  */
+var Program = require('../lib');
+
+
+// exec
+
+var prg = new Program;
+prg.up();
