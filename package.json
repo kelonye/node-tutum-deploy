@@ -19,7 +19,7 @@
   "author": "Mitchel Kelonye<kelonyemitchel@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kelonye/tutum-deploy.git"
+    "url": "git://github.com/kelonye/node-tutum-deploy.git"
   },
   "bin": {
     "td": "./bin/td"
