@@ -54,6 +54,8 @@ services:
   - TUTUM_APIKEY
 - Deploy!
 ```bash
+   $ td build
+   $ td push
    $ td up
 ```
 

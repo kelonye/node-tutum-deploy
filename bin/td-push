@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+/**
+  * Module dependencies.
+  */
+var program = require('commander');
+var Program = require('../lib');
+
+// opts
+
+program
+  .parse(process.argv);
+
+// exec
+
+var prg = new Program;
+prg.pushImages();

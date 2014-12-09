@@ -24,6 +24,8 @@ program.on('--help', function(){
   console.log();
   console.log('    up     deploy cluster');
   console.log('    ps     get services status');
+  console.log('    build  build images from dockerfiles');
+  console.log('    push   push images to registry');
   console.log();
   process.exit();
 });
