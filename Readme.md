@@ -16,10 +16,15 @@ Create a `tutum.yaml` conf in the root of your project.
 
 clusters:
 
-- name: app
+- name: us
+  region: nyc1 # digital ocean
+  type: 512mb
+  nodes: 4
+
+- name: eu
   region: ams2 # digital ocean
   type: 512mb
-  nodes: 1
+  nodes: 4
 
 services:
 
