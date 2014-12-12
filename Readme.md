@@ -1,7 +1,7 @@
 Tutum deploy
 ===
 
-[Fig](https://github.com/docker/fig) like deployment utility that uses [Tutum.co API](https://docs.tutum.co/v2/api/?shell#list-all-node-clusters) to manage node clusters.
+[Fig](https://github.com/docker/fig) like deployment utility that uses [Tutum.co API](https://docs.tutum.co/v2/api/?shell#list-all-node-clusters) to manage multiple nodes and clusters.
 
 Getting started
 ---
@@ -14,8 +14,9 @@ Create a `tutum.yaml` conf in the root of your project.
 
 ---
 
-cluster:
-  name: app
+clusters:
+
+- name: app
   region: ams2 # digital ocean
   type: 512mb
   nodes: 1
@@ -90,10 +91,23 @@ Use `td ps` to get the status of services.
     tutum:deploy cluster user/web state: Running +2s
 ```
 
-Example
+Custom nodes
 ---
 
-See [tweed](http://github.com/kelonye/tweed).
+To manage custom nodes, add a `nodes` section as in the example below:
+
+```yaml
+
+nodes:
+
+- uuid: 12345
+```
+
+Examples
+---
+
+- [Tweed](http://github.com/kelonye/tweed)
+- [Redis cluster test](https://github.com/kelonye/redis-cluster-test)
 
 Test
 ---
