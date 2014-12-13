@@ -1,6 +1,6 @@
 {
   "name": "tutum-deploy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easy cluster deployments using Tutum API",
   "dependencies": {
     "batch": "^0.5.1",
