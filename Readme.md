@@ -6,6 +6,14 @@ Tutum deploy
 Getting started
 ---
 
+    $ docker install kelonye/tutum-deploy
+
+Then create a shortcut command as:
+
+    $ alias td=$(docker run kelonye/tutum-deploy -v .:/opt/app)
+
+Or install using [npm](http://npmjs.org)
+
     $ npm install -g tutum-deploy
 
 Create a `tutum.yaml` conf in the root of your project.
@@ -80,7 +88,6 @@ Values are then passed by prefixing variable names with `TUTUM_`:
 
     $ TUTUM_APP_NAME=dev td up
 
-
 Service status
 ---
 
@@ -106,13 +113,29 @@ To manage custom nodes, add a `nodes` section as in the example below:
 nodes:
 
 - uuid: 12345
+
+clusters:
+
+- name: us
+  region: nyc1 # digital ocean
+  type: 512mb
+  nodes: 4
+
+- name: eu
+  region: ams2 # digital ocean
+  type: 512mb
+  nodes: 4
+
+services:
+
+...
 ```
 
 Examples
 ---
 
-- [Tweed](http://github.com/kelonye/tweed)
-- [Redis cluster test](https://github.com/kelonye/redis-cluster-test)
+- [Tweed](http://github.com/kelonye/tutum-tweed)
+- [Redis cluster test](https://github.com/kelonye/tutum-redis-cluster-test)
 
 Test
 ---

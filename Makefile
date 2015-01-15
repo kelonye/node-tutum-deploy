@@ -1,6 +1,10 @@
-test: node_modules
+IMAGE=kelonye/tutum-deploy
 
-node_modules:
-	@npm install
+build:
+	@docker build -t $(IMAGE) .
 
-.PHONY: example test
+push:
+	@$(MAKE) build
+	@docker push $(IMAGE)
+
+.PHONY: push build
